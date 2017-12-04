@@ -5,7 +5,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.moilioncircle</groupId>
 	<name>user-agent-utils</name>
-	<url>http://www.bitwalker.eu/software/user-agent-utils</url>
+    <url>https://github.com/leonchen83/user-agent-utils</url>
 	<artifactId>user-agent-utils</artifactId>
 	<version>1.5</version>
 	<description>Utility classes to handle user-agents.</description>

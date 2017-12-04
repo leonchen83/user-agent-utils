@@ -70,7 +70,7 @@ public enum OperatingSystem {
 
     ANDROID(Manufacturer.GOOGLE, null, 0, "Android", new String[]{"Android"}, new String[]{"Ubuntu"}, DeviceType.MOBILE, null),
     ANDROID7(Manufacturer.GOOGLE, OperatingSystem.ANDROID, 7, "Android 7.x", new String[]{"Android 7", "Android-7"}, new String[]{"glass"}, DeviceType.MOBILE, null),
-    ANDROID7_TABLET(Manufacturer.GOOGLE, OperatingSystem.ANDROID6, 70, "Android 7.x Tablet", new String[]{"Android 7", "Android-7"}, new String[]{"mobile", "glass"}, DeviceType.TABLET, null),
+    ANDROID7_TABLET(Manufacturer.GOOGLE, OperatingSystem.ANDROID7, 70, "Android 7.x Tablet", new String[]{"Android 7", "Android-7"}, new String[]{"mobile", "glass"}, DeviceType.TABLET, null),
     ANDROID6(Manufacturer.GOOGLE, OperatingSystem.ANDROID, 6, "Android 6.x", new String[]{"Android 6", "Android-6"}, new String[]{"glass"}, DeviceType.MOBILE, null),
     ANDROID6_TABLET(Manufacturer.GOOGLE, OperatingSystem.ANDROID6, 60, "Android 6.x Tablet", new String[]{"Android 6", "Android-6"}, new String[]{"mobile", "glass"}, DeviceType.TABLET, null),
     ANDROID5(Manufacturer.GOOGLE, OperatingSystem.ANDROID, 5, "Android 5.x", new String[]{"Android 5", "Android-5"}, new String[]{"glass"}, DeviceType.MOBILE, null),

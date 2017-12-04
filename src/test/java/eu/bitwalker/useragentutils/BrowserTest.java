@@ -392,9 +392,12 @@ public class BrowserTest {
 	
 	String[] opera = {
 			"Opera/8.0 (Macintosh; PPC Mac OS X; U; en)",
-			"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.155 Safari/537.36 OPR/66.0.1889.174",
+			"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.155 Safari/537.36 OPR/66.0.1889.174"
+	};
+
+	String[] opera43 = {
 			"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.85 Safari/537.36 OPR/43.0.1948.25"
-		};
+	};
 	
 	String[] opera9 = {
 			"Opera/9.52 (Windows NT 5.1; U; en)",
@@ -663,7 +666,7 @@ public class BrowserTest {
 		testAgents(edge12Clients, Browser.EDGE12);
 		testAgents(edge13Clients, Browser.EDGE13);
 		testAgents(edge14Clients, Browser.EDGE14);
-		testAgents(edge15Clients, Browser.EDGE);
+		testAgents(edge15Clients, Browser.EDGE15);
 		testAgents(edgeMobileClients, Browser.EDGE_MOBILE12);
 		testAgents(ieTooOld, Browser.IE);
 		testAgents(outlook2007, Browser.OUTLOOK2007);
@@ -725,6 +728,7 @@ public class BrowserTest {
 		testAgents(operaMobile, Browser.OPERA_MOBILE);
 		testAgents(opera9, Browser.OPERA9);
 		testAgents(opera, Browser.OPERA);
+		testAgents(opera43, Browser.OPERA43);
 		testAgents(opera10, Browser.OPERA10);
 		testAgents(opera11, Browser.OPERA11);
 		testAgents(opera12, Browser.OPERA12);
@@ -758,10 +762,6 @@ public class BrowserTest {
 		testAgents(firefox48, Browser.FIREFOX48);
 		testAgents(firefox49, Browser.FIREFOX49);
 		testAgents(firefox50, Browser.FIREFOX);
-
-		UserAgent ua = UserAgent.parseUserAgentString(edge15Clients[0]);
-		System.out.println(ua.getBrowser().getName());
-		System.out.println(ua.getOperatingSystem().getName());
 	}
 	
 	@Test
