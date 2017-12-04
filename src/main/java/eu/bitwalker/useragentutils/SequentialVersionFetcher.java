@@ -21,9 +21,7 @@ public class SequentialVersionFetcher implements VersionFetcher {
     public Version version(String str) {
         for (VersionFetcher fetcher : fetchers) {
             Version version = fetcher.version(str);
-            if (version != null) {
-                return version;
-            }
+            if (version != null) return version;
         }
         return null;
     }

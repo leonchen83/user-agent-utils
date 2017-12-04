@@ -137,10 +137,8 @@ public enum Manufacturer {
 	 * Canonical Ltd.
 	 */
 	CONONICAL(25,"Canonical Ltd.");
-	
-	
-	
-	private final short id;
+
+    private final short id;
 	private final String name;
 
 	Manufacturer(int id, String name) {

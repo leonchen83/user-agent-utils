@@ -23,9 +23,7 @@ class PatternBasedVersionFetcher implements VersionFetcher {
 	@Override
 	public final Version version(String userAgentString) {
 		Matcher matcher = pattern.matcher(userAgentString);
-		if (!matcher.find()) {
-			return null;
-		}
+		if (!matcher.find()) return null;
 		return createVersion(matcher);
 	}
 	
@@ -33,8 +31,7 @@ class PatternBasedVersionFetcher implements VersionFetcher {
 		String fullVersionString = matcher.group(1);
 		String majorVersion = matcher.group(2);
 		String minorVersion = "0";
-		if (matcher.groupCount() > 2) // usually but not always there is a minor version
-			minorVersion = matcher.group(3);
+		if (matcher.groupCount() > 2) minorVersion = matcher.group(3);
 		return new Version (fullVersionString,majorVersion,minorVersion);
 	}
 
