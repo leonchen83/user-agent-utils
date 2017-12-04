@@ -42,30 +42,7 @@ import eu.bitwalker.useragentutils.version.Version;
 import java.io.Serializable;
 
 /**
- * Container class for user-agent information with operating system and browser details.
- * Can decode user-agent strings.
- * <br><br>
- * Resources:<br>
- * <a href="http://www.useragentstring.com">User Agent String.Com</a><br>
- * <a href="http://www.myuseragentstring.com/">My User Agent String</a><br>
- * <a href="http://www.user-agents.org">List of User-Agents</a><br>
- * <a href="http://user-agent-string.info">user-agent-string.info</a><br>
- * <a href="http://www.zytrax.com/tech/web/browser_ids.htm">Browser ID (User-Agent) Strings</a><br>
- * <a href="http://www.zytrax.com/tech/web/mobile_ids.html">Mobile Browser ID (User-Agent) Strings</a><br>
- * <a href="http://www.joergkrusesweb.de/internet/browser/user-agent.html">Browser-Kennungen</a><br>
- * <a href="http://deviceatlas.com/devices">Device Atlas - Mobile Device Intelligence</a><br>
- * <a href="http://mobileopera.com/reference/ua">Mobile Opera user-agent strings</a><br>
- * <a href="http://en.wikipedia.org/wiki/S60_platform">S60 platform</a><br>
- * <a href="http://msdn.microsoft.com/en-us/library/ms537503.aspx">Understanding User-Agent Strings</a><br>
- * <a href="http://developer.sonyericsson.com/site/global/docstools/browsing/p_browsing.jsp">Sony Ericsson Web Docs & Tools</a><br>
- * <a href="http://developer.apple.com/internet/safari/faq.html#anchor2">What is the Safari user-agent string</a><br>
- * <a href="http://www.pgts.com.au/pgtsj/pgtsj0208c.html">List of User Agent Strings</a><br>
- * <a href="http://blogs.msdn.com/iemobile/archive/2006/08/03/Detecting_IE_Mobile.aspx">Detecting Internet Explorer Mobile's User-Agent on the server</a>
- */
-
-/**
  * @author harald
- *
  */
 public class UserAgent implements Serializable {
 

@@ -803,7 +803,7 @@ public class BrowserTest {
 	@Test
 	public void testUniqueIdValues() {
 		
-		List<Short> retrievedIdValues = new ArrayList<Short>();
+		List<Short> retrievedIdValues = new ArrayList<>();
 		
 		for (Browser browser : Browser.values()) {
 			assertTrue(browser.toString(),!retrievedIdValues.contains(browser.getId()));

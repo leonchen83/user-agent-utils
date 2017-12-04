@@ -34,6 +34,7 @@ public abstract class AbstractUserAgentParameterizedTest {
 		this.expectedOS = expectedOS;
 	}
 
+	@SuppressWarnings("AssertEqualsBetweenInconvertibleTypes")
 	@Test
 	public void shouldParseUserAgent() throws Exception {
 		UserAgent userAgent = UserAgent

@@ -67,7 +67,7 @@ public class ApplicationTest {
 	 */
 	@Test
 	public void testUniqueIdValues() {
-		List<Short> retrievedIdValues = new ArrayList<Short>();
+		List<Short> retrievedIdValues = new ArrayList<>();
 
 		for (Application application : Application.values()) {
 			assertTrue(!retrievedIdValues.contains(application.getId()));

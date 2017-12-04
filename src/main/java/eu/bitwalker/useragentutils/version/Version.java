@@ -38,8 +38,8 @@
 package eu.bitwalker.useragentutils.version;
 
 /**
- * Container for general version information.
- * All version information is stored as String as sometimes version information includes alphabetical characters.
+ * Container for general version information. All version information is stored as String as sometimes version
+ * information includes alphabetical characters.
  *
  * @author harald
  */
@@ -50,8 +50,7 @@ public class Version implements Comparable<Version> {
     String minorVersion;
 
     /**
-     * This constructor is created for APIs that require default constructor
-     * and should never be used directly.
+     * This constructor is created for APIs that require default constructor and should never be used directly.
      *
      * @deprecated Use {@link #Version(String, String, String)}
      */
@@ -89,9 +88,9 @@ public class Version implements Comparable<Version> {
         final int prime = 31;
         int result = 1;
         result = prime * result
-                + ((majorVersion == null) ? 0 : majorVersion.hashCode());
+            + ((majorVersion == null) ? 0 : majorVersion.hashCode());
         result = prime * result
-                + ((minorVersion == null) ? 0 : minorVersion.hashCode());
+            + ((minorVersion == null) ? 0 : minorVersion.hashCode());
         result = prime * result + ((version == null) ? 0 : version.hashCode());
         return result;
     }
@@ -134,9 +133,7 @@ public class Version implements Comparable<Version> {
         for (int i = 0; i < Math.min(versionParts.length, otherVersionParts.length); i++) {
             if (versionParts[i].length() == otherVersionParts[i].length()) {
                 int comparisonResult = versionParts[i].compareTo(otherVersionParts[i]);
-                if (comparisonResult == 0) {
-                    continue;
-                } else {
+                if (comparisonResult != 0) {
                     return comparisonResult;
                 }
             } else {
@@ -144,12 +141,6 @@ public class Version implements Comparable<Version> {
             }
         }
 
-        if (versionParts.length > otherVersionParts.length) {
-            return 1;
-        } else if (versionParts.length < otherVersionParts.length) {
-            return -1;
-        } else {
-            return 0;
-        }
+        return Integer.compare(versionParts.length, otherVersionParts.length);
     }
 }

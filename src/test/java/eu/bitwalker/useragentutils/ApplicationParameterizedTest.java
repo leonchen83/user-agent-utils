@@ -1,6 +1,3 @@
-/**
- * 
- */
 package eu.bitwalker.useragentutils;
 
 import org.junit.Test;
@@ -24,10 +21,6 @@ public class ApplicationParameterizedTest {
 
 	private final Application _expectedApplication;
 
-	/**
-	 * @param referrerString
-	 * @param expectedApplication
-	 */
 	public ApplicationParameterizedTest(String referrerString,
 			Application expectedApplication) {
 		_referrerString = referrerString;

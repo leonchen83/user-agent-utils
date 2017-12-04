@@ -57,7 +57,7 @@ public class ManufacturerTest {
 	@Test
 	public void testUniqueIdValues() {
 		
-		List<Short> retrievedIdValues = new ArrayList<Short>();
+		List<Short> retrievedIdValues = new ArrayList<>();
 		
 		for (Manufacturer application : Manufacturer.values()) {
 			assertTrue(application.getId() + " already exists",!retrievedIdValues.contains(application.getId()));

@@ -265,7 +265,7 @@ public enum OperatingSystem {
     // create collection of top level operating systems during initialization
     private static void addTopLevelOperatingSystem(OperatingSystem os) {
         if (topLevelOperatingSystems == null)
-            topLevelOperatingSystems = new ArrayList<OperatingSystem>();
+            topLevelOperatingSystems = new ArrayList<>();
         topLevelOperatingSystems.add(os);
     }
 

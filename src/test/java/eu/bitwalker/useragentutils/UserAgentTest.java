@@ -1,6 +1,3 @@
-/**
- * 
- */
 package eu.bitwalker.useragentutils;
 
 import org.junit.Test;
