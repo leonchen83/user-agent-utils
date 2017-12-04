@@ -99,7 +99,7 @@ public enum OperatingSystem {
      * PalmOS, exact version unkown
      */
     WEBOS(Manufacturer.HP, null, 11, "WebOS", new String[]{"webOS", "hp-tablet", "hpwOS"}, null, DeviceType.MOBILE, null),
-    WEBOS1(Manufacturer.HP, OperatingSystem.WEBOS, 12, "WebOS 1.0", new String[]{"webOS/1.0", "hpwOS/1.0"}, null, DeviceType.MOBILE, null),
+    WEBOS1_0(Manufacturer.HP, OperatingSystem.WEBOS, 12, "WebOS 1.0", new String[]{"webOS/1.0", "hpwOS/1.0"}, null, DeviceType.MOBILE, null),
     WEBOS1_1(Manufacturer.HP, OperatingSystem.WEBOS, 13, "WebOS 1.1", new String[]{"webOS/1.1", "hpwOS/1.1"}, null, DeviceType.MOBILE, null),
     WEBOS1_2(Manufacturer.HP, OperatingSystem.WEBOS, 14, "WebOS 1.2", new String[]{"webOS/1.2", "hpwOS/1.2"}, null, DeviceType.MOBILE, null),
     WEBOS1_3(Manufacturer.HP, OperatingSystem.WEBOS, 15, "WebOS 1.3", new String[]{"webOS/1.3", "hpwOS/1.3"}, null, DeviceType.MOBILE, null),

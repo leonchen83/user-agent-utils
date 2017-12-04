@@ -107,9 +107,12 @@ public class OperatingSystemTest {
 			"Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; PalmSource/Palm-D050; Blazer/4.3) 16;320x320)", // Palm TX PDA
 			"Mozilla/4.76 (compatible; MSIE 6.0; U; Windows 95; PalmSource; PalmOS; WebPro; Tungsten Proxyless 1.1 320x320x16)"
 	};
-	
-	String[] webOS = {
+
+	String[] webOS13 = {
 			"Mozilla/5.0 (webOS/1.3; U; en-US) AppleWebKit/525.27.1 (KHTML, like Gecko) Version/1.0 Safari/525.27.1 Desktop/1.0",
+	};
+
+	String[] webOS10 = {
 			"Mozilla/5.0 (webOS/1.0; U; en-US) AppleWebKit/525.27.1 (KHTML, like Gecko) Version/1.0 Safari/525.27.1 Pre/1.0"
 	};
 	
@@ -429,7 +432,8 @@ public class OperatingSystemTest {
 		testAgents(windows98, OperatingSystem.WINDOWS_98);
 		testAgents(palmOsDevices, OperatingSystem.PALM);
 		testAgents(bada, OperatingSystem.BADA);
-		testAgents(webOS, OperatingSystem.WEBOS);
+		testAgents(webOS13, OperatingSystem.WEBOS1_3);
+		testAgents(webOS10, OperatingSystem.WEBOS1_0);
 		testAgents(symbian9phones, OperatingSystem.SYMBIAN9);
 		testAgents(symbian8phones, OperatingSystem.SYMBIAN8);
 		testAgents(symbian7phones, OperatingSystem.SYMBIAN7);
