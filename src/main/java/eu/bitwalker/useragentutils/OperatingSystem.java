@@ -52,15 +52,15 @@ public enum OperatingSystem {
     /**
      * Windows Mobile / Windows CE. Exact version unknown.
      */
-    WINDOWS(Manufacturer.MICROSOFT, null, 1, "Windows", new String[]{"Windows"}, new String[]{"Palm", "ggpht.com"}, DeviceType.COMPUTER, null), // catch the rest of older Windows systems (95, NT,...)
+    WINDOWS(Manufacturer.MICROSOFT, null, 1, "Windows", new String[]{"Windows", "Win32"}, new String[]{"Palm", "ggpht.com"}, DeviceType.COMPUTER, null), // catch the rest of older Windows systems (95, NT,...)
     WINDOWS_10(Manufacturer.MICROSOFT, OperatingSystem.WINDOWS, 24, "Windows 10", new String[]{"Windows NT 6.4", "Windows NT 10"}, null, DeviceType.COMPUTER, null), // before Win, yes, Windows 10 is called 6.4 LOL
     WINDOWS_81(Manufacturer.MICROSOFT, OperatingSystem.WINDOWS, 23, "Windows 8.1", new String[]{"Windows NT 6.3"}, null, DeviceType.COMPUTER, null), // before Win, yes, Windows 8.1 is called 6.3 LOL
     WINDOWS_8(Manufacturer.MICROSOFT, OperatingSystem.WINDOWS, 22, "Windows 8", new String[]{"Windows NT 6.2"}, new String[]{"Xbox", "Xbox One"}, DeviceType.COMPUTER, null), // before Win, yes, Windows 8 is called 6.2 LOL
     WINDOWS_7(Manufacturer.MICROSOFT, OperatingSystem.WINDOWS, 21, "Windows 7", new String[]{"Windows NT 6.1"}, new String[]{"Xbox", "Xbox One"}, DeviceType.COMPUTER, null), // before Win, yes, Windows 7 is called 6.1 LOL
     WINDOWS_VISTA(Manufacturer.MICROSOFT, OperatingSystem.WINDOWS, 20, "Windows Vista", new String[]{"Windows NT 6"}, new String[]{"Xbox", "Xbox One"}, DeviceType.COMPUTER, null), // before Win
     WINDOWS_2000(Manufacturer.MICROSOFT, OperatingSystem.WINDOWS, 15, "Windows 2000", new String[]{"Windows NT 5.0"}, null, DeviceType.COMPUTER, null), // before Win
-    WINDOWS_XP(Manufacturer.MICROSOFT, OperatingSystem.WINDOWS, 10, "Windows XP", new String[]{"Windows NT 5"}, new String[]{"ggpht.com"}, DeviceType.COMPUTER, null), // before Win, 5.1 and 5.2 are basically XP systems
-    WINDOWS_10_MOBILE(Manufacturer.MICROSOFT, OperatingSystem.WINDOWS, 54, "Windows 10 Mobile", new String[]{"Windows Phone 10"}, null, DeviceType.MOBILE, null),
+    WINDOWS_XP(Manufacturer.MICROSOFT, OperatingSystem.WINDOWS, 10, "Windows XP", new String[]{"Windows NT 5"}, new String[]{"ggpht.com", "Xbox", "Xbox One"}, DeviceType.COMPUTER, null), // before Win, 5.1 and 5.2 are basically XP systems
+    WINDOWS_10_MOBILE(Manufacturer.MICROSOFT, OperatingSystem.WINDOWS, 54, "Windows 10 Mobile", new String[]{"Windows Phone 10"}, new String[]{"Xbox", "Xbox One"}, DeviceType.MOBILE, null),
     WINDOWS_PHONE8_1(Manufacturer.MICROSOFT, OperatingSystem.WINDOWS, 53, "Windows Phone 8.1", new String[]{"Windows Phone 8.1"}, null, DeviceType.MOBILE, null), // before Win
     WINDOWS_PHONE8(Manufacturer.MICROSOFT, OperatingSystem.WINDOWS, 52, "Windows Phone 8", new String[]{"Windows Phone 8"}, null, DeviceType.MOBILE, null), // before Win
     WINDOWS_MOBILE7(Manufacturer.MICROSOFT, OperatingSystem.WINDOWS, 51, "Windows Phone 7", new String[]{"Windows Phone OS 7"}, null, DeviceType.MOBILE, null), // should be Windows Phone 7 but to keep it compatible we'll leave the name as is.
@@ -98,7 +98,18 @@ public enum OperatingSystem {
     /**
      * PalmOS, exact version unkown
      */
-    WEBOS(Manufacturer.HP, null, 11, "WebOS", new String[]{"webOS"}, null, DeviceType.MOBILE, null),
+    WEBOS(Manufacturer.HP, null, 11, "WebOS", new String[]{"webOS", "hp-tablet", "hpwOS"}, null, DeviceType.MOBILE, null),
+    WEBOS1(Manufacturer.HP, OperatingSystem.WEBOS, 12, "WebOS 1.0", new String[]{"webOS/1.0", "hpwOS/1.0"}, null, DeviceType.MOBILE, null),
+    WEBOS1_1(Manufacturer.HP, OperatingSystem.WEBOS, 13, "WebOS 1.1", new String[]{"webOS/1.1", "hpwOS/1.1"}, null, DeviceType.MOBILE, null),
+    WEBOS1_2(Manufacturer.HP, OperatingSystem.WEBOS, 14, "WebOS 1.2", new String[]{"webOS/1.2", "hpwOS/1.2"}, null, DeviceType.MOBILE, null),
+    WEBOS1_3(Manufacturer.HP, OperatingSystem.WEBOS, 15, "WebOS 1.3", new String[]{"webOS/1.3", "hpwOS/1.3"}, null, DeviceType.MOBILE, null),
+    WEBOS1_4(Manufacturer.HP, OperatingSystem.WEBOS, 16, "WebOS 1.4", new String[]{"webOS/1.4", "hpwOS/1.4"}, null, DeviceType.MOBILE, null),
+    WEBOS2(Manufacturer.HP, OperatingSystem.WEBOS, 17, "WebOS 2.0", new String[]{"webOS/2.0", "hpwOS/2.0"}, null, DeviceType.MOBILE, null),
+    WEBOS2_1(Manufacturer.HP, OperatingSystem.WEBOS, 18, "WebOS 2.1", new String[]{"webOS/2.1", "hpwOS/2.1"}, null, DeviceType.MOBILE, null),
+    WEBOS2_2(Manufacturer.HP, OperatingSystem.WEBOS, 19, "WebOS 2.2", new String[]{"webOS/2.2", "hpwOS/2.2"}, null, DeviceType.MOBILE, null),
+    WEBOS2_3(Manufacturer.HP, OperatingSystem.WEBOS, 20, "WebOS 2.3", new String[]{"webOS/2.3", "hpwOS/2.3"}, null, DeviceType.MOBILE, null),
+    WEBOS3(Manufacturer.HP, OperatingSystem.WEBOS, 21, "WebOS 3.0", new String[]{"webOS/3.0", "hpwOS/3.0"}, null, DeviceType.MOBILE, null),
+
     PALM(Manufacturer.HP, null, 10, "PalmOS", new String[]{"Palm"}, null, DeviceType.MOBILE, null),
     MEEGO(Manufacturer.NOKIA, null, 3, "MeeGo", new String[]{"MeeGo"}, null, DeviceType.MOBILE, null),
 
@@ -108,6 +119,9 @@ public enum OperatingSystem {
     IOS(Manufacturer.APPLE, null, 2, "iOS", new String[]{"iPhone", "like Mac OS X"}, null, DeviceType.MOBILE, null), // before MAC_OS_X_IPHONE for all older versions
     iOS11_IPHONE(Manufacturer.APPLE, OperatingSystem.IOS, 110, "iOS 11 (iPhone)", new String[]{"iPhone OS 11"}, null, DeviceType.MOBILE, null), // before MAC_OS_X_IPHONE for all older versions
     iOS10_IPHONE(Manufacturer.APPLE, OperatingSystem.IOS, 100, "iOS 10 (iPhone)", new String[]{"iPhone OS 10"}, null, DeviceType.MOBILE, null), // before MAC_OS_X_IPHONE for all older versions
+    iOS9_3_IPHONE(Manufacturer.APPLE, OperatingSystem.IOS, 93, "iOS 9.3 (iPhone)", new String[]{"iPhone OS 9_3"}, null, DeviceType.MOBILE, null), // before MAC_OS_X_IPHONE for all older versions
+    iOS9_2_IPHONE(Manufacturer.APPLE, OperatingSystem.IOS, 92, "iOS 9.2 (iPhone)", new String[]{"iPhone OS 9_2"}, null, DeviceType.MOBILE, null), // before MAC_OS_X_IPHONE for all older versions
+    iOS9_1_IPHONE(Manufacturer.APPLE, OperatingSystem.IOS, 91, "iOS 9.1 (iPhone)", new String[]{"iPhone OS 9_1"}, null, DeviceType.MOBILE, null), // before MAC_OS_X_IPHONE for all older versions
     iOS9_IPHONE(Manufacturer.APPLE, OperatingSystem.IOS, 90, "iOS 9 (iPhone)", new String[]{"iPhone OS 9"}, null, DeviceType.MOBILE, null), // before MAC_OS_X_IPHONE for all older versions
     iOS8_4_IPHONE(Manufacturer.APPLE, OperatingSystem.IOS, 49, "iOS 8.4 (iPhone)", new String[]{"iPhone OS 8_4"}, null, DeviceType.MOBILE, null), // before MAC_OS_X_IPHONE for all older versions
     iOS8_3_IPHONE(Manufacturer.APPLE, OperatingSystem.IOS, 48, "iOS 8.3 (iPhone)", new String[]{"iPhone OS 8_3"}, null, DeviceType.MOBILE, null), // before MAC_OS_X_IPHONE for all older versions

@@ -249,6 +249,14 @@ public enum Browser {
     ),
     BLACKBERRY10(Manufacturer.BLACKBERRY, Browser.SAFARI, 10, "BlackBerry", new String[]{"BB10"}, null, BrowserType.MOBILE_BROWSER, RenderingEngine.WEBKIT, null),
     MOBILE_SAFARI(Manufacturer.APPLE, Browser.SAFARI, 2, "Mobile Safari", new String[]{"Mobile Safari", "Mobile/"}, new String[]{"bot", "preview", "OPR/", "Coast/", "Vivaldi", "CFNetwork", "FxiOS"}, BrowserType.MOBILE_BROWSER, RenderingEngine.WEBKIT, null),  // before Safari
+    MOBILE_SAFARI10(Manufacturer.APPLE, Browser.MOBILE_SAFARI, 110, "Mobile Safari 10", new String[]{"Mobile/14"}, new String[]{"bot", "preview", "OPR/", "Coast/", "Vivaldi", "CFNetwork", "Googlebot-Mobile", "Build/", "bingbot/"}, BrowserType.MOBILE_BROWSER, RenderingEngine.WEBKIT, null), // before Safari
+    MOBILE_SAFARI9(Manufacturer.APPLE, Browser.MOBILE_SAFARI, 109, "Mobile Safari 9", new String[]{"Mobile/13"}, new String[]{"bot", "preview", "OPR/", "Coast/", "Vivaldi", "CFNetwork", "Googlebot-Mobile", "Build/", "bingbot/"}, BrowserType.MOBILE_BROWSER, RenderingEngine.WEBKIT, null), // before Safari
+    MOBILE_SAFARI8(Manufacturer.APPLE, Browser.MOBILE_SAFARI, 108, "Mobile Safari 8", new String[]{"Mobile/12"}, new String[]{"bot", "preview", "OPR/", "Coast/", "Vivaldi", "CFNetwork", "Googlebot-Mobile", "Build/", "bingbot/"}, BrowserType.MOBILE_BROWSER, RenderingEngine.WEBKIT, null), // before Safari
+    MOBILE_SAFARI7(Manufacturer.APPLE, Browser.MOBILE_SAFARI, 107, "Mobile Safari 7", new String[]{"Mobile/11"}, new String[]{"bot", "preview", "OPR/", "Coast/", "Vivaldi", "CFNetwork", "Googlebot-Mobile", "Build/", "bingbot/"}, BrowserType.MOBILE_BROWSER, RenderingEngine.WEBKIT, null), // before Safari
+    MOBILE_SAFARI6(Manufacturer.APPLE, Browser.MOBILE_SAFARI, 106, "Mobile Safari 6", new String[]{"Mobile/10"}, new String[]{"bot", "preview", "OPR/", "Coast/", "Vivaldi", "CFNetwork", "Googlebot-Mobile", "Build/", "bingbot/"}, BrowserType.MOBILE_BROWSER, RenderingEngine.WEBKIT, null), // before Safari
+    MOBILE_SAFARI5(Manufacturer.APPLE, Browser.MOBILE_SAFARI, 105, "Mobile Safari 5", new String[]{"Mobile/9"}, new String[]{"bot", "preview", "OPR/", "Coast/", "Vivaldi", "CFNetwork", "Googlebot-Mobile", "Build/", "bingbot/"}, BrowserType.MOBILE_BROWSER, RenderingEngine.WEBKIT, null), // before Safari
+    MOBILE_SAFARI4(Manufacturer.APPLE, Browser.MOBILE_SAFARI, 104, "Mobile Safari 4", new String[]{"Mobile/8", "Mobile/7", "Mobile Safari/"}, new String[]{"bot", "preview", "OPR/", "Coast/", "Vivaldi", "CFNetwork", "Googlebot-Mobile", "Build/", "bingbot/"}, BrowserType.MOBILE_BROWSER, RenderingEngine.WEBKIT, null), // before Safari
+
     SILK(Manufacturer.AMAZON, Browser.SAFARI, 15, "Silk", new String[]{"Silk/"}, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, new PatternBasedVersionFetcher("Silk\\/(([0-9]+)\\.?([\\w]+)?(\\.[\\w]+)?(\\-[\\w]+)?)")),  // http://en.wikipedia.org/wiki/Amazon_Silk
     SAFARI11(Manufacturer.APPLE, Browser.SAFARI, 11, "Safari 11", new String[]{"Version/11"}, new String[]{"bot"}, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null),
     SAFARI10(Manufacturer.APPLE, Browser.SAFARI, 10, "Safari 10", new String[]{"Version/10"}, new String[]{"bot"}, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null),
@@ -341,7 +349,14 @@ public enum Browser {
 
     SEAMONKEY(Manufacturer.OTHER, null, 15, "SeaMonkey", new String[]{"SeaMonkey"}, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, new PatternBasedVersionFetcher("SeaMonkey\\/(([0-9]+)\\.?([\\w]+)?(\\.[\\w]+)?)")), // using Gecko Engine
 
-    BOT(Manufacturer.OTHER, null, 12, "Robot/Spider", new String[]{"Googlebot", "Mediapartners-Google", "Web Preview", "bot", "Applebot", "spider", "crawler", "Feedfetcher", "Slurp", "Twiceler", "Nutch", "BecomeBot", "bingbot", "BingPreview", "Google Web Preview", "WordPress.com mShots", "Seznam", "facebookexternalhit", "YandexMarket", "Teoma", "ThumbSniper", "Phantom"}, null, BrowserType.ROBOT, RenderingEngine.OTHER, null),
+    BOT(Manufacturer.OTHER, null, 12, "Robot/Spider", new String[]{"AdsBot-Google", "adbeat.com", "Googlebot", "Mediapartners-Google", "Web Preview", "bot",
+            "Applebot", "spider", "crawler", "Feedfetcher", "Slurp", "Twiceler", "Nutch", "BecomeBot", "bingbot", "BingPreview/", "Google Web Preview",
+            "WordPress.com mShots", "Seznam", "facebookexternalhit", "YandexMarket", "Teoma", "ThumbSniper", "Phantom.js", "Accoona-AI-Agent",
+            "Arachmo", "B-l-i-t-z-B-O-T", "Cerberian Drtrs", "Charlotte", "Covario", "DataparkSearch",
+            "FindLinks", "Holmes", "htdig", "ia_archiver", "ichiro", "igdeSpyder", "L.webis", "Larbin", "LinkWalker", "lwp-trivial", "mabontland",
+            "Mnogosearch", "mogimogi", "MVAClient", "NetResearchServer", "NewsGator", "NG-Search", "Nymesis", "oegp", "Pompos", "PycURL", "Qseero", "SBIder",
+            "ScoutJet", "Scrubby", "SearchSight", "semanticdiscovery", "Snappy", "Sqworm", "StackRambler", "TinEye", "truwo", "updated", "voyager",
+            "VYU2", "webcollage", "YahooSeeker", "yoogliFetchAgent", "Zao", "yahoo-ad-monitoring"}, null, BrowserType.ROBOT, RenderingEngine.OTHER, null),
     BOT_MOBILE(Manufacturer.OTHER, Browser.BOT, 20, "Mobile Robot/Spider", new String[]{"Googlebot-Mobile"}, null, BrowserType.ROBOT, RenderingEngine.OTHER, null),
 
     MOZILLA(Manufacturer.MOZILLA, null, 1, "Mozilla", new String[]{"Mozilla", "Moozilla"}, new String[]{"ggpht.com"}, BrowserType.WEB_BROWSER, RenderingEngine.OTHER, null), // rest of the mozilla browsers
