@@ -85,9 +85,12 @@ public enum RenderingEngine {
 	OTHER("Other");
 	
 	String name;
-	
-	private RenderingEngine(String name) {
+
+	RenderingEngine(String name) {
 		this.name = name;
 	}
 
+	public String getName() {
+		return this.name;
+	}
 }

@@ -1,9 +1,9 @@
 package eu.bitwalker.useragentutils;
 
-import static java.util.regex.Pattern.CASE_INSENSITIVE;
-
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import static java.util.regex.Pattern.CASE_INSENSITIVE;
 
 /**
  * Extracts version from provided UserAgent string using pattern.  

@@ -3,13 +3,10 @@
  */
 package eu.bitwalker.useragentutils;
 
-import static org.junit.Assert.*;
-
 import org.junit.Test;
 
-import eu.bitwalker.useragentutils.Browser;
-import eu.bitwalker.useragentutils.OperatingSystem;
-import eu.bitwalker.useragentutils.UserAgent;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
 
 /**
  * @author harald

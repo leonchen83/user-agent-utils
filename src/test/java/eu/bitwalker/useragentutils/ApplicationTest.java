@@ -37,12 +37,12 @@
 
 package eu.bitwalker.useragentutils;
 
-import static org.junit.Assert.assertTrue;
+import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import org.junit.Test;
+import static org.junit.Assert.assertTrue;
 
 /**
  * Test class for application detection.

@@ -37,15 +37,15 @@
 
 package eu.bitwalker.useragentutils;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.fail;
+import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.fail;
 
 /**
  * @author harald
@@ -95,6 +95,14 @@ public class BrowserTest {
 
 	String [] edge13Clients = new String[] {
 			"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2486.0 Safari/537.36 Edge/13.10586"
+	};
+
+	String[] edge14Clients = new String[]{
+			"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2486.0 Safari/537.36 Edge/14.14300"
+	};
+
+	String[] edge15Clients = new String[]{
+			"Mozilla/5.0 (Windows NT 10.0; Win64; x64; Xbox; Xbox One) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36 Edge/15.15063"
 	};
 	
 	String[] edgeMobileClients = new String[] {
@@ -319,6 +327,18 @@ public class BrowserTest {
 	String[] safari = {
 			"Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_5_7; en-us) AppleWebKit/525.28.3 (KHTML, like Gecko) Version/3.2.3 Safari/525.28.3",
 			"Mozilla/5.0 (Macintosh; U; Intel Mac OS X; en-gb) AppleWebKit/523.10.6 (KHTML, like Gecko) Version/3.0.4 Safari/523.10.6"
+	};
+
+	String[] safari11 = {
+			"Mozilla/5.0 (iPad; CPU OS 11_0 like Mac OS X) AppleWebKit/604.1.25 (KHTML, like Gecko) Version/11.0 Safari/604.1"
+	};
+
+	String[] safari10 = {
+			"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/602.4.8 (KHTML, like Gecko) Version/10.0.3 Safari/602.4.8"
+	};
+
+	String[] safari9 = {
+			"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12) AppleWebKit/602.1.14 (KHTML, like Gecko) Version/9.2 Safari/602.1.14"
 	};
 	
 	String[] safari8 = {
@@ -556,6 +576,20 @@ public class BrowserTest {
 	String[] proxy = {
 			"Mozilla/5.0 (Windows; U; Windows NT 5.1; de; rv:1.9.0.7) Gecko/2009021910 Firefox/3.0.7 (via ggpht.com)" // Gmail proxy server
 	};
+
+	String[] firefox48 = {
+			"Mozilla/5.0 (Windows NT 6.1; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0",
+	};
+
+	String[] firefox49 = {
+			"Mozilla/5.0 (X11; SunOS sun4u; rv:49.1) Gecko/20100101 Firefox/49.1",
+	};
+
+	String[] firefox50 = {
+			"Mozilla/5.0 Gecko/20100101 Firefox 50.0",
+	};
+
+
 	
 	/**
 	 * Test method for {@link eu.bitwalker.useragentutils.Browser#isInUserAgentString(java.lang.String)}.
@@ -628,6 +662,8 @@ public class BrowserTest {
 		testAgents(ie11clients, Browser.IE11);
 		testAgents(edge12Clients, Browser.EDGE12);
 		testAgents(edge13Clients, Browser.EDGE13);
+		testAgents(edge14Clients, Browser.EDGE14);
+		testAgents(edge15Clients, Browser.EDGE);
 		testAgents(edgeMobileClients, Browser.EDGE_MOBILE12);
 		testAgents(ieTooOld, Browser.IE);
 		testAgents(outlook2007, Browser.OUTLOOK2007);
@@ -674,6 +710,9 @@ public class BrowserTest {
 		testAgents(futureFirefoxVersion, Browser.FIREFOX);
 		testAgents(safari, Browser.SAFARI);
 		testAgents(dolfin, Browser.DOLFIN2);
+		testAgents(safari11, Browser.SAFARI11);
+		testAgents(safari10, Browser.SAFARI10);
+		testAgents(safari9, Browser.SAFARI9);
 		testAgents(safari8, Browser.SAFARI8);
 		testAgents(safari7, Browser.SAFARI7);
 		testAgents(safari6, Browser.SAFARI6);
@@ -716,6 +755,13 @@ public class BrowserTest {
 		testAgents(airApp, Browser.ADOBE_AIR);
 		testAgents(blackberry10, Browser.BLACKBERRY10);
 		testAgents(vivaldi, Browser.VIVALDI);
+		testAgents(firefox48, Browser.FIREFOX48);
+		testAgents(firefox49, Browser.FIREFOX49);
+		testAgents(firefox50, Browser.FIREFOX);
+
+		UserAgent ua = UserAgent.parseUserAgentString(edge15Clients[0]);
+		System.out.println(ua.getBrowser().getName());
+		System.out.println(ua.getOperatingSystem().getName());
 	}
 	
 	@Test

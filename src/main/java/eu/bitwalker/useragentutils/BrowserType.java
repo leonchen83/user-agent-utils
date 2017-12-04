@@ -75,8 +75,8 @@ public enum BrowserType {
 	UNKNOWN("unknown");
 	
 	private String name;
-	
-	private BrowserType(String name) {
+
+	BrowserType(String name) {
 		this.name = name;
 	}
 

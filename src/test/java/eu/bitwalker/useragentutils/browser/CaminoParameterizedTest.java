@@ -1,13 +1,12 @@
 package eu.bitwalker.useragentutils.browser;
 
-import static java.util.Arrays.asList;
+import eu.bitwalker.useragentutils.Browser;
+import eu.bitwalker.useragentutils.OperatingSystem;
+import org.junit.runners.Parameterized.Parameters;
 
 import java.util.Collection;
 
-import org.junit.runners.Parameterized.Parameters;
-
-import eu.bitwalker.useragentutils.Browser;
-import eu.bitwalker.useragentutils.OperatingSystem;
+import static java.util.Arrays.asList;
 
 public class CaminoParameterizedTest extends AbstractUserAgentParameterizedTest {
 

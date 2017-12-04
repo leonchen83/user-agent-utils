@@ -3,15 +3,15 @@
  */
 package eu.bitwalker.useragentutils;
 
-import static java.util.Arrays.asList;
-import static org.junit.Assert.assertEquals;
-
-import java.util.Collection;
-
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
+
+import java.util.Collection;
+
+import static java.util.Arrays.asList;
+import static org.junit.Assert.assertEquals;
 
 /**
  * 

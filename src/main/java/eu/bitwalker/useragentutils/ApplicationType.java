@@ -51,8 +51,8 @@ public enum ApplicationType {
 	UNKNOWN("unknown");
 	
 	private String name;
-	
-	private ApplicationType(String name) {
+
+	ApplicationType(String name) {
 		this.name = name;
 	}
 

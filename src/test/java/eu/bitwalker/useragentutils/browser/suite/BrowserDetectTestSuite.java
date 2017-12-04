@@ -1,9 +1,5 @@
 package eu.bitwalker.useragentutils.browser.suite;
 
-import org.junit.runner.RunWith;
-import org.junit.runners.Suite;
-import org.junit.runners.Suite.SuiteClasses;
-
 import eu.bitwalker.useragentutils.browser.BlackberryParameterizedTest;
 import eu.bitwalker.useragentutils.browser.BotParameterizedTest;
 import eu.bitwalker.useragentutils.browser.CFNetworkParameterizedTest;
@@ -23,6 +19,9 @@ import eu.bitwalker.useragentutils.browser.OutlookParameterizedTest;
 import eu.bitwalker.useragentutils.browser.SafariParameterizedTest;
 import eu.bitwalker.useragentutils.browser.ThunderbirdParameterizedTest;
 import eu.bitwalker.useragentutils.browser.ToolParameterizedTest;
+import org.junit.runner.RunWith;
+import org.junit.runners.Suite;
+import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
 @SuiteClasses({ 
