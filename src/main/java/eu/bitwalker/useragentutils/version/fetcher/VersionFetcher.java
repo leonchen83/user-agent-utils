@@ -1,6 +1,6 @@
 package eu.bitwalker.useragentutils.version.fetcher;
 
-import eu.bitwalker.useragentutils.version.Version;
+import eu.bitwalker.useragentutils.Version;
 
 /**
  * Interaface that gets string and returns extrancted version

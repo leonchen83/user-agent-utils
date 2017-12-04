@@ -1,6 +1,6 @@
 package eu.bitwalker.useragentutils.version.fetcher;
 
-import eu.bitwalker.useragentutils.version.Version;
+import eu.bitwalker.useragentutils.Version;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

@@ -35,7 +35,7 @@
 * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-package eu.bitwalker.useragentutils.version;
+package eu.bitwalker.useragentutils;
 
 /**
  * Container for general version information. All version information is stored as String as sometimes version

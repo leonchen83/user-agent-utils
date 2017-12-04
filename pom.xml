@@ -7,7 +7,7 @@
 	<name>user-agent-utils</name>
     <url>https://github.com/leonchen83/user-agent-utils</url>
 	<artifactId>user-agent-utils</artifactId>
-	<version>1.50</version>
+	<version>1.51</version>
 	<description>Utility classes to handle user-agents.</description>
 
 	<licenses>

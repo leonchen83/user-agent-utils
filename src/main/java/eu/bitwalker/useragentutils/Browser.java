@@ -38,7 +38,6 @@
 package eu.bitwalker.useragentutils;
 
 import eu.bitwalker.useragentutils.browser.SafariUtils;
-import eu.bitwalker.useragentutils.version.Version;
 import eu.bitwalker.useragentutils.version.fetcher.PatternBasedVersionFetcher;
 import eu.bitwalker.useragentutils.version.fetcher.SequentialVersionFetcher;
 import eu.bitwalker.useragentutils.version.fetcher.VersionFetcher;

@@ -1,6 +1,6 @@
 package eu.bitwalker.useragentutils.version.fetcher;
 
-import eu.bitwalker.useragentutils.version.Version;
+import eu.bitwalker.useragentutils.Version;
 
 /**
  * Implementation of {@link VersionFetcher} that holds a list of other {@link VersionFetcher}
