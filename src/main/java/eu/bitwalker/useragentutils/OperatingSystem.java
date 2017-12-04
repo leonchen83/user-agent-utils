@@ -301,22 +301,10 @@ public enum OperatingSystem {
         return this;
     }
 
-    /**
-     * Returns the manufacturer of the operating system
-     *
-     * @return the manufacturer
-     */
     public Manufacturer getManufacturer() {
         return manufacturer;
     }
 
-    /**
-     * Checks if the given user-agent string matches to the operating system.
-     * Only checks for one specific operating system.
-     *
-     * @param agentString
-     * @return boolean
-     */
     public boolean isInUserAgentString(String agentString) {
         if (agentString == null) {
             return false;
@@ -329,13 +317,6 @@ public enum OperatingSystem {
         return Utils.contains(agentLowerCaseString, aliases);
     }
 
-    /**
-     * Checks if the given user-agent does not contain one of the tokens which should not match.
-     * In most cases there are no excluding tokens, so the impact should be small.
-     *
-     * @param agentLowerCaseString
-     * @return
-     */
     private boolean containsExcludeTokenLowercase(final String agentLowerCaseString) {
         return Utils.contains(agentLowerCaseString, excludeList);
     }
@@ -359,13 +340,6 @@ public enum OperatingSystem {
         return null;
     }
 
-    /**
-     * Parses user agent string and returns the best match.
-     * Returns OperatingSystem.UNKNOWN if there is no match.
-     *
-     * @param agentString
-     * @return OperatingSystem
-     */
     public static OperatingSystem parseUserAgentString(String agentString) {
         return parseUserAgentString(agentString, topLevelOperatingSystems);
     }
@@ -377,14 +351,6 @@ public enum OperatingSystem {
         return parseUserAgentLowercaseString(agentString, topLevelOperatingSystems);
     }
 
-    /**
-     * Parses the user agent string and returns the best match for the given operating systems.
-     * Returns OperatingSystem.UNKNOWN if there is no match.
-     * Be aware that if the order of the provided operating systems is incorrect or the set is too limited it can lead to false matches!
-     *
-     * @param agentString
-     * @return OperatingSystem
-     */
     public static OperatingSystem parseUserAgentString(String agentString, List<OperatingSystem> operatingSystems) {
         if (agentString != null) {
             final String agentLowercaseString = agentString.toLowerCase();
@@ -404,13 +370,6 @@ public enum OperatingSystem {
         return OperatingSystem.UNKNOWN;
     }
 
-    /**
-     * Returns the enum constant of this type with the specified id.
-     * Throws IllegalArgumentException if the value does not exist.
-     *
-     * @param id
-     * @return
-     */
     public static OperatingSystem valueOf(short id) {
         for (OperatingSystem operatingSystem : OperatingSystem.values()) {
             if (operatingSystem.getId() == id)

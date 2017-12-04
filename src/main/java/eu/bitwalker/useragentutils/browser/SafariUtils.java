@@ -7,21 +7,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * There are 2 types of user agent strings that present Safari: one that contains fragment {@code Version/1.2.3} from where the version of
- * Safari browser can be extracted and others that do not.
- * Fortunately Safari User-Agent string contains version of WebKit that can be used to discover the version of Safari browser.
- * This class contains mapping between version of WebKit and Safari browser taken from  {@link <a href="https://en.wikipedia.org/wiki/Safari_version_history">Wikipedia</a>}
- * In most cases version of WebKit exists and uniquely identifies version of Safari browser.
- * Unfortunately there are several exceptions.
- * <ol>
- * <li>There is no information about WebKit version for some Safari versions. This requires additional discovery</li>
- * <li>
- * The same version of WebKit used in several versions of Safari that causes ambiguity. Fortunately in all found cases these different versions of Safari
- * are built for different operating systems, so theoretically we can distinguish between different versions of Safari with the same web kit by using
- * information about operating system. Such feature however is not supported by the environment right now.
- * </li>
- * </ol>
- *
  * @author alexr
  */
 // https://en.wikipedia.org/wiki/Safari_version_history

@@ -427,12 +427,6 @@ public enum Browser {
         return name;
     }
 
-    /**
-     * Detects the detailed version information of the browser. Depends on the userAgent to be available.
-     * Returns null if it can not detect the version information.
-     *
-     * @return Version
-     */
     public Version getVersion(String userAgentString) {
         if (versionFetcher == null) {
             return getGroup() != this ? getGroup().getVersion(userAgentString) : null;
@@ -508,17 +502,6 @@ public enum Browser {
         return null;
     }
 
-    /**
-     * Iterates over all Browsers to compare the browser signature with
-     * the user agent string. If no match can be found Browser.UNKNOWN will
-     * be returned.
-     * Starts with the top level browsers and only if one of those matches
-     * checks children browsers.
-     * Steps out of loop as soon as there is a match.
-     *
-     * @param agentString
-     * @return Browser
-     */
     public static Browser parseUserAgentString(String agentString) {
         return parseUserAgentString(agentString, topLevelBrowsers);
     }
@@ -530,16 +513,6 @@ public enum Browser {
         return parseUserAgentLowercaseString(agentString, topLevelBrowsers);
     }
 
-    /**
-     * Iterates over the given Browsers (incl. children) to compare the browser
-     * signature with the user agent string.
-     * If no match can be found Browser.UNKNOWN will be returned.
-     * Steps out of loop as soon as there is a match.
-     * Be aware that if the order of the provided Browsers is incorrect or if the set is too limited it can lead to false matches!
-     *
-     * @param agentString
-     * @return Browser
-     */
     public static Browser parseUserAgentString(String agentString, List<Browser> browsers) {
         if (agentString != null) {
             String agentLowercaseString = agentString.toLowerCase();
@@ -558,13 +531,6 @@ public enum Browser {
         return Browser.UNKNOWN;
     }
 
-    /**
-     * Returns the enum constant of this type with the specified id.
-     * Throws IllegalArgumentException if the value does not exist.
-     *
-     * @param id
-     * @return
-     */
     public static Browser valueOf(short id) {
         for (Browser browser : Browser.values()) {
             if (browser.getId() == id)

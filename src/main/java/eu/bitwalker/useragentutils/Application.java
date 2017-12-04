@@ -132,13 +132,6 @@ public enum Application {
         return Application.UNKNOWN;
     }
 
-    /**
-     * Returns the enum constant of this type with the specified id. Throws
-     * IllegalArgumentException if the value does not exist.
-     *
-     * @param id
-     * @return
-     */
     public static Application valueOf(short id) {
         for (Application application : Application.values()) {
             if (application.getId() == id) return application;
