@@ -45,7 +45,7 @@
 		<connection>scm:git:git@github.com:leonchen83/user-agent-utils.git</connection>
 		<url>scm:git:git@github.com:leonchen83/user-agent-utils.git</url>
 		<developerConnection>scm:git:git@github.com:leonchen83/user-agent-utils.git</developerConnection>
-		<tag>2.4.5</tag>
+		<tag>1.51</tag>
 	</scm>
 
 	<issueManagement>
