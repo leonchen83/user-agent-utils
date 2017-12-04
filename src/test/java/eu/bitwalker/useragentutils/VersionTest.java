@@ -1,5 +1,6 @@
 package eu.bitwalker.useragentutils;
 
+import eu.bitwalker.useragentutils.version.Version;
 import org.junit.Test;
 
 import static org.junit.Assert.assertTrue;

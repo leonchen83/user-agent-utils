@@ -1,6 +1,6 @@
 package eu.bitwalker.useragentutils.browser;
 
-import eu.bitwalker.useragentutils.Version;
+import eu.bitwalker.useragentutils.version.Version;
 
 import java.util.Collections;
 import java.util.HashMap;

@@ -35,7 +35,7 @@
 * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-package eu.bitwalker.useragentutils;
+package eu.bitwalker.useragentutils.version;
 
 /**
  * Container for general version information.

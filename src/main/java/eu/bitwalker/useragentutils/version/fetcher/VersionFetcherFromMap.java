@@ -1,4 +1,6 @@
-package eu.bitwalker.useragentutils;
+package eu.bitwalker.useragentutils.version.fetcher;
+
+import eu.bitwalker.useragentutils.version.Version;
 
 import java.util.Collections;
 import java.util.Map;
@@ -13,10 +15,10 @@ import java.util.regex.Pattern;
  *
  * @author alexr
  */
-class VersionFetcherFromMap extends PatternBasedVersionFetcher {
+public class VersionFetcherFromMap extends PatternBasedVersionFetcher {
     private final Map<String, Version> versions;
 
-    VersionFetcherFromMap(Pattern pattern, Map<String, Version> versions) {
+    public VersionFetcherFromMap(Pattern pattern, Map<String, Version> versions) {
         super(pattern);
         this.versions = Collections.unmodifiableMap(versions);
     }

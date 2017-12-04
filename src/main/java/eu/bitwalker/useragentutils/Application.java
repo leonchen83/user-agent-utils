@@ -73,8 +73,7 @@ public enum Application {
     private final ApplicationType applicationType;
     private final Manufacturer manufacturer;
 
-    Application(Manufacturer manufacturer, int versionId, String name,
-                String[] aliases, ApplicationType applicationType) {
+    Application(Manufacturer manufacturer, int versionId, String name, String[] aliases, ApplicationType applicationType) {
         this.id = (short) ((manufacturer.getId() << 8) + (byte) versionId);
         this.name = name;
         this.aliases = Utils.toLowerCase(aliases);
@@ -142,8 +141,7 @@ public enum Application {
      */
     public static Application valueOf(short id) {
         for (Application application : Application.values()) {
-            if (application.getId() == id)
-                return application;
+            if (application.getId() == id) return application;
         }
 
         // same behavior as standard valueOf(string) method

@@ -37,6 +37,8 @@
 
 package eu.bitwalker.useragentutils;
 
+import eu.bitwalker.useragentutils.version.Version;
+
 import java.io.Serializable;
 
 /**

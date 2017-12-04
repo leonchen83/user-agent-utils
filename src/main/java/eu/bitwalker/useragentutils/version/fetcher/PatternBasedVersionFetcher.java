@@ -1,4 +1,6 @@
-package eu.bitwalker.useragentutils;
+package eu.bitwalker.useragentutils.version.fetcher;
+
+import eu.bitwalker.useragentutils.version.Version;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -9,14 +11,14 @@ import static java.util.regex.Pattern.CASE_INSENSITIVE;
  * Extracts version from provided UserAgent string using pattern.  
  * @author alexr
  */
-class PatternBasedVersionFetcher implements VersionFetcher {
+public class PatternBasedVersionFetcher implements VersionFetcher {
 	private final Pattern pattern;
 
-	PatternBasedVersionFetcher(String regex) {
+	public PatternBasedVersionFetcher(String regex) {
 		this(Pattern.compile(regex, CASE_INSENSITIVE));
 	}
-	
-	PatternBasedVersionFetcher(Pattern pattern) {
+
+	public PatternBasedVersionFetcher(Pattern pattern) {
 		this.pattern = pattern;
 	}
 
