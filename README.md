@@ -53,51 +53,28 @@ Add dependency:
 <dependency>
    <groupId>eu.bitwalker</groupId>
    <artifactId>UserAgentUtils</artifactId>
-   <version>1.20</version>
-</dependency>
-```
-
-Add dependency for snapshot releases:
-```xml
-<dependency>
-   <groupId>eu.bitwalker</groupId>
-   <artifactId>UserAgentUtils</artifactId>
-   <version>1.21-SNAPSHOT</version>
+   <version>1.52</version>
 </dependency>
 ```
 
 Contributors
 ------------
-* This project is NOT accepting any new contributions.  
-* If you want changes, feel free to fork this project and start your own version. Send me a link and I'll be happy to promote it.  
-* Code has been contributed by: Nathan Maves, Francisco Collao (https://github.com/pcollaog), Madgency (https://github.com/guignol), Pavel Sher (https://github.com/pavelsher), Pierre Etchemaite, Alexander Radzin (https://github.com/alexradzin), SeabassNg (https://github.com/SeabassNg), Sudeep Sinha (https://github.com/sudeep-sinha), John Dydo, frankdev (https://github.com/frankdev), Lew Dawson, Joachim Mueller (https://github.com/joachimmueller), Jason Calabrese (https://github.com/jasoncalabrese), Thorsten Schaefer, Parker Seidel (https://github.com/parker), Joris Aerts (https://github.com/JorisAerts), Stephan Heffner, Filipe Névola (https://github.com/filipenevola), John Patrick (https://github.com/nhojpatrick), Konrad Kubacki (https://github.com/konradkg), Vipul Delwadia (https://github.com/vipuldelwadia) and more. A BIG thank you to all of them!
+* accepting any new contributions.  
 
 Sponsors
 --------
 Jetbrains  
 
-
-FAQ
----
-
-_Can I add new browsers or operating systems?_  
-Unfortunately not directly. This library uses enums to represent browsers and operating systems to make using it easy and readable. Unfortunately the use of enums also has some disadvantages. You can make a pull request on trunk for a new browser or operating system if all tests are still passing. The purpose of this library is not to detect every possible version, so you’ll have to provide the business value for a change.
-
-_Where can I report bugs or make feature requests_  
-Go to https://github.com/HaraldWalker/user-agent-utils/issues
-
-_How can I improve the performance of the user-agent parsing?_  
-When handling requests on a web-server, consider if you need both the browser and operating system or if one of the two gives you enough information. As the parsing uses an ordered tree structure, performance depends a lot on the type of clients making the requests. The most common browsers and operating systems will be parsed faster than exotic ones. Consider caching the results temporarily.
-
-_Are there other libraries like this?_  
-When I started this project in 2010 there were no other libraries offering the features I was looking for. Currently there are both open source as well as commercial solutions.
-
 Contact
 -------
-http://www.bitwalker.eu/contact  
+chen.bao.yi@qq.com  
 
 Changelog
 ---------
+
+1.52
+----
+- Added current Firefox and Chrome and Opera versions(until 2018-02-27)
 
 1.19
 ----
