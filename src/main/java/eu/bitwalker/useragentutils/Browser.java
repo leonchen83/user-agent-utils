@@ -129,6 +129,9 @@ public enum Browser {
      */
     CHROME(Manufacturer.GOOGLE, null, 1, "Chrome", new String[]{"Chrome", "CrMo", "CriOS"}, new String[]{"OPR/", "Web Preview", "Vivaldi"}, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, new PatternBasedVersionFetcher("Chrome\\/(([0-9]+)\\.?([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)")), // before Mozilla
     CHROME_MOBILE(Manufacturer.GOOGLE, Browser.CHROME, 100, "Chrome Mobile", new String[]{"CrMo", "CriOS", "Mobile Safari"}, new String[]{"OPR/"}, BrowserType.MOBILE_BROWSER, RenderingEngine.WEBKIT, new PatternBasedVersionFetcher("(?:CriOS|CrMo|Chrome)\\/(([0-9]+)\\.?([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)")),
+    CHROME66(Manufacturer.GOOGLE, Browser.CHROME, 72, "Chrome 66", new String[]{"Chrome/66"}, new String[]{"OPR/", "Web Preview", "Vivaldi"}, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null), // before Mozilla
+    CHROME65(Manufacturer.GOOGLE, Browser.CHROME, 71, "Chrome 65", new String[]{"Chrome/65"}, new String[]{"OPR/", "Web Preview", "Vivaldi"}, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null), // before Mozilla
+    CHROME64(Manufacturer.GOOGLE, Browser.CHROME, 70, "Chrome 64", new String[]{"Chrome/64"}, new String[]{"OPR/", "Web Preview", "Vivaldi"}, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null), // before Mozilla
     CHROME63(Manufacturer.GOOGLE, Browser.CHROME, 69, "Chrome 63", new String[]{"Chrome/63"}, new String[]{"OPR/", "Web Preview", "Vivaldi"}, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null), // before Mozilla
     CHROME62(Manufacturer.GOOGLE, Browser.CHROME, 68, "Chrome 62", new String[]{"Chrome/62"}, new String[]{"OPR/", "Web Preview", "Vivaldi"}, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null), // before Mozilla
     CHROME61(Manufacturer.GOOGLE, Browser.CHROME, 67, "Chrome 61", new String[]{"Chrome/61"}, new String[]{"OPR/", "Web Preview", "Vivaldi"}, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null), // before Mozilla
@@ -196,6 +199,8 @@ public enum Browser {
      * Firefox for iOS devices. This Firefox version is using webkit instead of gecko rendering engine.
      */
     FIREFOX_MOBILE_IOS(Manufacturer.MOZILLA, FIREFOX_MOBILE, 224, "Firefox Mobile (iOS)", new String[]{"FxiOS"}, null, BrowserType.MOBILE_BROWSER, RenderingEngine.WEBKIT, null),
+    FIREFOX59(Manufacturer.MOZILLA, Browser.FIREFOX, 238, "Firefox 59", new String[]{"Firefox/59"}, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null),  // using Gecko Engine
+    FIREFOX58(Manufacturer.MOZILLA, Browser.FIREFOX, 237, "Firefox 58", new String[]{"Firefox/58"}, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null),  // using Gecko Engine
     FIREFOX57(Manufacturer.MOZILLA, Browser.FIREFOX, 236, "Firefox 57", new String[]{"Firefox/57"}, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null),  // using Gecko Engine
     FIREFOX56(Manufacturer.MOZILLA, Browser.FIREFOX, 235, "Firefox 56", new String[]{"Firefox/56"}, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null),  // using Gecko Engine
     FIREFOX55(Manufacturer.MOZILLA, Browser.FIREFOX, 234, "Firefox 55", new String[]{"Firefox/55"}, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null),  // using Gecko Engine
@@ -282,6 +287,8 @@ public enum Browser {
     OPERA(Manufacturer.OPERA, null, 1, "Opera", new String[]{" OPR/", "Opera"}, null, BrowserType.WEB_BROWSER, RenderingEngine.PRESTO, new PatternBasedVersionFetcher("[o][p][e]?[r][a]?\\/(([\\d]+)\\.([\\w]+)(\\.([\\w]+))?(\\.([\\w]+))?)")),   // before MSIE
     OPERA_MOBILE(Manufacturer.OPERA, Browser.OPERA, 100, "Opera Mobile", new String[]{"Mobile Safari"}, null, BrowserType.MOBILE_BROWSER, RenderingEngine.BLINK, new PatternBasedVersionFetcher("OPR\\/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)")), // Another Opera for mobile devices
     OPERA_MINI(Manufacturer.OPERA, Browser.OPERA, 20, "Opera Mini", new String[]{"Opera Mini"}, null, BrowserType.MOBILE_BROWSER, RenderingEngine.PRESTO, null), // Opera for mobile devices
+    OPERA51(Manufacturer.OPERA, Browser.OPERA, 51, "Opera 51", new String[]{"OPR/51."}, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, new PatternBasedVersionFetcher("OPR\\/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)")),
+    OPERA50(Manufacturer.OPERA, Browser.OPERA, 50, "Opera 50", new String[]{"OPR/50."}, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, new PatternBasedVersionFetcher("OPR\\/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)")),
     OPERA49(Manufacturer.OPERA, Browser.OPERA, 49, "Opera 49", new String[]{"OPR/49."}, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, new PatternBasedVersionFetcher("OPR\\/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)")),
     OPERA48(Manufacturer.OPERA, Browser.OPERA, 48, "Opera 48", new String[]{"OPR/48."}, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, new PatternBasedVersionFetcher("OPR\\/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)")),
     OPERA47(Manufacturer.OPERA, Browser.OPERA, 47, "Opera 47", new String[]{"OPR/47."}, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, new PatternBasedVersionFetcher("OPR\\/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)")),
@@ -539,12 +546,5 @@ public enum Browser {
         // same behavior as standard valueOf(string) method
         throw new IllegalArgumentException(
                 "No enum const for id " + id);
-    }
-
-    public static void main(String[] args) {
-        Browser[] b = Browser.values();
-        for (Browser browser : b) {
-            System.out.println(browser.getName() + "," + browser.getId());
-        }
     }
 }

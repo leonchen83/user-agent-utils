@@ -7,7 +7,7 @@
 	<name>user-agent-utils</name>
     <url>https://github.com/leonchen83/user-agent-utils</url>
 	<artifactId>user-agent-utils</artifactId>
-	<version>1.51</version>
+	<version>1.52</version>
 	<description>Utility classes to handle user-agents.</description>
 
 	<licenses>
@@ -45,7 +45,7 @@
 		<connection>scm:git:git@github.com:leonchen83/user-agent-utils.git</connection>
 		<url>scm:git:git@github.com:leonchen83/user-agent-utils.git</url>
 		<developerConnection>scm:git:git@github.com:leonchen83/user-agent-utils.git</developerConnection>
-		<tag>1.51</tag>
+		<tag>1.52</tag>
 	</scm>
 
 	<issueManagement>

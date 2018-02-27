@@ -259,6 +259,10 @@ public class BrowserTest {
 	String[] chrome36 = new String[] {
 			"	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.143 Safari/537.36"
 	};
+
+	String[] chrome64 = new String[]{
+			"Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.167 Safari/537.36"
+	};
 	
 
 	String[] chrome33 = new String[] {
@@ -299,7 +303,11 @@ public class BrowserTest {
 	String[] firefox25 = new String[] {
 			"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.6; rv:25.0) Gecko/20100101 Firefox/25.0"
 	};
-	
+
+	String[] firefox59 = new String[]{
+			"Mozilla/5.0 (X11; Linux i686; rv:59.0) Gecko/20100101 Firefox/59.0"
+	};
+
 	String[] firefox28 = new String[] {
 			"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:28.0) Gecko/20100101 Firefox/28.0"
 	};
@@ -469,7 +477,10 @@ public class BrowserTest {
 			"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.155 Safari/537.36 OPR/31.0.1889.174"
 	};
 
-	
+	String[] opera51 = {
+			"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.15 Safari/537.36 OPR/51.0.2830.0 (Edition developer)"
+	};
+
 	String[] operaMini = {
 		"Opera/9.60 (J2ME/MIDP; Opera Mini/4.2.13337/458; U; en) Presto/2.2.0",
 		"Opera/9.80 (J2ME/MIDP; Opera Mini/5.0.16823/1428; U; en) Presto/2.2.0",
@@ -699,6 +710,7 @@ public class BrowserTest {
 		testAgents(chrome32, Browser.CHROME32);
 		testAgents(chrome33, Browser.CHROME33);
 		testAgents(chrome36, Browser.CHROME36);
+		testAgents(chrome64, Browser.CHROME64);
 		testAgents(firefox3, Browser.FIREFOX3);
 		testAgents(firefox4, Browser.FIREFOX4);
 		testAgents(firefox5, Browser.FIREFOX5);
@@ -706,6 +718,7 @@ public class BrowserTest {
 		testAgents(firefox19, Browser.FIREFOX19);
 		testAgents(firefox20, Browser.FIREFOX20);
 		testAgents(firefox25, Browser.FIREFOX25);
+		testAgents(firefox59, Browser.FIREFOX59);
 		testAgents(firefox3mobile, Browser.FIREFOX3MOBILE);
 		testAgents(firefoxMobile, Browser.FIREFOX_MOBILE);
 		testAgents(firefoxMobileForIos, Browser.FIREFOX_MOBILE_IOS);
@@ -742,6 +755,7 @@ public class BrowserTest {
 		testAgents(opera24, Browser.OPERA24);
 		testAgents(opera27, Browser.OPERA27);
 		testAgents(opera31, Browser.OPERA31);
+		testAgents(opera51, Browser.OPERA51);
 		testAgents(operaCoast, Browser.COAST1);
 		testAgents(camino2, Browser.CAMINO2);
 		testAgents(camino, Browser.CAMINO);		
