@@ -1,39 +1,39 @@
 /*
-* Copyright (c) 2008-2016, Harald Walker (bitwalker.eu) and contributing developers
-* All rights reserved.
-* 
-* Redistribution and use in source and binary forms, with or
-* without modification, are permitted provided that the
-* following conditions are met:
-* 
-* * Redistributions of source code must retain the above
-* copyright notice, this list of conditions and the following
-* disclaimer.
-* 
-* * Redistributions in binary form must reproduce the above
-* copyright notice, this list of conditions and the following
-* disclaimer in the documentation and/or other materials
-* provided with the distribution.
-* 
-* * Neither the name of bitwalker nor the names of its
-* contributors may be used to endorse or promote products
-* derived from this software without specific prior written
-* permission.
-* 
-* THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND
-* CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
-* INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
-* MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
-* DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR
-* CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-* SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
-* NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
-* LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
-* HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
-* CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
-* OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
-* SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-*/
+ * Copyright (c) 2008-2016, Harald Walker (bitwalker.eu) and contributing developers
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or
+ * without modification, are permitted provided that the
+ * following conditions are met:
+ *
+ * * Redistributions of source code must retain the above
+ * copyright notice, this list of conditions and the following
+ * disclaimer.
+ *
+ * * Redistributions in binary form must reproduce the above
+ * copyright notice, this list of conditions and the following
+ * disclaimer in the documentation and/or other materials
+ * provided with the distribution.
+ *
+ * * Neither the name of bitwalker nor the names of its
+ * contributors may be used to endorse or promote products
+ * derived from this software without specific prior written
+ * permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND
+ * CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+ * INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+ * MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR
+ * CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+ * SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
+ * NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+ * LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+ * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+ * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+ * OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+ * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ */
 
 package eu.bitwalker.useragentutils;
 
@@ -69,6 +69,8 @@ public enum OperatingSystem {
     XBOX_OS(Manufacturer.MICROSOFT, OperatingSystem.WINDOWS, 62, "Xbox OS", new String[]{"xbox"}, new String[]{}, DeviceType.GAME_CONSOLE, null),
 
     ANDROID(Manufacturer.GOOGLE, null, 0, "Android", new String[]{"Android"}, new String[]{"Ubuntu"}, DeviceType.MOBILE, null),
+    ANDROID8(Manufacturer.GOOGLE, OperatingSystem.ANDROID, 8, "Android 8.x", new String[]{"Android 8", "Android-8"}, new String[]{"glass"}, DeviceType.MOBILE, null),
+    ANDROID8_TABLET(Manufacturer.GOOGLE, OperatingSystem.ANDROID8, 80, "Android 8.x Tablet", new String[]{"Android 8", "Android-8"}, new String[]{"mobile", "glass"}, DeviceType.TABLET, null),
     ANDROID7(Manufacturer.GOOGLE, OperatingSystem.ANDROID, 7, "Android 7.x", new String[]{"Android 7", "Android-7"}, new String[]{"glass"}, DeviceType.MOBILE, null),
     ANDROID7_TABLET(Manufacturer.GOOGLE, OperatingSystem.ANDROID7, 70, "Android 7.x Tablet", new String[]{"Android 7", "Android-7"}, new String[]{"mobile", "glass"}, DeviceType.TABLET, null),
     ANDROID6(Manufacturer.GOOGLE, OperatingSystem.ANDROID, 6, "Android 6.x", new String[]{"Android 6", "Android-6"}, new String[]{"glass"}, DeviceType.MOBILE, null),
@@ -133,6 +135,8 @@ public enum OperatingSystem {
     iOS5_IPHONE(Manufacturer.APPLE, OperatingSystem.IOS, 42, "iOS 5 (iPhone)", new String[]{"iPhone OS 5"}, null, DeviceType.MOBILE, null), // before MAC_OS_X_IPHONE for all older versions
     iOS4_IPHONE(Manufacturer.APPLE, OperatingSystem.IOS, 41, "iOS 4 (iPhone)", new String[]{"iPhone OS 4"}, null, DeviceType.MOBILE, null), // before MAC_OS_X_IPHONE for all older versions
     MAC_OS_X_IPAD(Manufacturer.APPLE, OperatingSystem.IOS, 50, "Mac OS X (iPad)", new String[]{"iPad"}, null, DeviceType.TABLET, null), // before Mac OS X
+    iOS11_IPAD(Manufacturer.APPLE, OperatingSystem.MAC_OS_X_IPAD, 60, "iOS 11 (iPad)", new String[]{"OS 11"}, null, DeviceType.TABLET, null), // before Mac OS X
+    iOS10_IPAD(Manufacturer.APPLE, OperatingSystem.MAC_OS_X_IPAD, 59, "iOS 10 (iPad)", new String[]{"OS 10"}, null, DeviceType.TABLET, null), // before Mac OS X
     iOS9_IPAD(Manufacturer.APPLE, OperatingSystem.MAC_OS_X_IPAD, 58, "iOS 9 (iPad)", new String[]{"OS 9"}, null, DeviceType.TABLET, null), // before Mac OS X
     iOS8_4_IPAD(Manufacturer.APPLE, OperatingSystem.MAC_OS_X_IPAD, 57, "iOS 8.4 (iPad)", new String[]{"OS 8_4"}, null, DeviceType.TABLET, null), // before Mac OS X
     iOS8_3_IPAD(Manufacturer.APPLE, OperatingSystem.MAC_OS_X_IPAD, 56, "iOS 8.3 (iPad)", new String[]{"OS 8_3"}, null, DeviceType.TABLET, null), // before Mac OS X
@@ -165,6 +169,22 @@ public enum OperatingSystem {
      * Google TV uses Android 2.x or 3.x but doesn't identify itself as Android.
      */
     GOOGLE_TV(Manufacturer.GOOGLE, null, 100, "Android (Google TV)", new String[]{"GoogleTV"}, null, DeviceType.DMR, null),
+
+    /**
+     * Tizen is a Linux Foundation project. Mostly used by various Samsung devices.
+     *
+     * @see <a href="https://wiki.tizen.org/Tizen_Browser">Tizen Browser user-agent format</a>
+     * @see <a href="http://developer.samsung.com/technical-doc/view.do?v=T000000203">Samsung Internet User-Agent String Format</a>
+     * Not specified how devices like car display or a fridge would identify themselves.
+     */
+    TIZEN(Manufacturer.LINUX_FOUNDATION, null, 101, "Tizen", new String[]{"Tizen"}, null, DeviceType.UNKNOWN, null),
+    TIZEN3(Manufacturer.LINUX_FOUNDATION, OperatingSystem.TIZEN, 30, "Tizen 3", new String[]{"Tizen 3."}, null, DeviceType.UNKNOWN, null),
+    TIZEN3_MOBILE(Manufacturer.LINUX_FOUNDATION, OperatingSystem.TIZEN3, 31, "Tizen 3 (Mobile)", new String[]{"mobile"}, null, DeviceType.MOBILE, null),
+    TIZEN3_TV(Manufacturer.LINUX_FOUNDATION, OperatingSystem.TIZEN3, 32, "Tizen 3 (SmartTV)", new String[]{"Smart-TV", " TV "}, null, DeviceType.DMR, null),
+    TIZEN2(Manufacturer.LINUX_FOUNDATION, OperatingSystem.TIZEN, 20, "Tizen 2", new String[]{"Tizen 2."}, null, DeviceType.UNKNOWN, null),
+    TIZEN2_MOBILE(Manufacturer.LINUX_FOUNDATION, OperatingSystem.TIZEN2, 21, "Tizen 2 (Mobile)", new String[]{"mobile"}, null, DeviceType.MOBILE, null),
+    TIZEN2_TV(Manufacturer.LINUX_FOUNDATION, OperatingSystem.TIZEN2, 22, "Tizen 2 (SmartTV)", new String[]{"Smart-TV", " TV "}, null, DeviceType.DMR, null),
+    TIZEN_MOBILE(Manufacturer.LINUX_FOUNDATION, OperatingSystem.TIZEN, 10, "Tizen (mobile)", new String[]{"mobile"}, null, DeviceType.MOBILE, null),
 
     /**
      * Various Linux based operating systems.
