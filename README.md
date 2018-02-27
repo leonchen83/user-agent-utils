@@ -3,47 +3,8 @@ user-agent-utils
 
 Utilities for processing user-agent strings. Can be used to handle http requests in real-time or to analyze log files.
 
-http://www.bitwalker.eu/software/user-agent-utils
-
 For the latest release, go to
-https://github.com/HaraldWalker/user-agent-utils/tree/master
-
-EOL WARNING
------------
-This library has reached end-of-life!  
-Version 1.20 is the last official release.
-  
-PULL REQUESTS WILL NOT BE PROCESSED.  
-
-If you want to improve this library, fork it and release it yourself.  
-
-As alternative have a look at the Browscap project and its implementations.  
-https://github.com/HaraldWalker/user-agent-utils  
-
-User-agent-utils needed your support
-------------------------------------
-If you used this library for a commercial product, a donation would have been great during the past years.   
- 
-<a href="http://flattr.com/thing/1968218/HaraldWalkeruser-agent-utils-on-GitHub" target="_blank"><img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" /></a>
-
-Advice
-------
-A lot of user-agents lie about their identity. That makes US sniffing a guessing game. On websites it is a better approach to detect features using a javascript library like Modernizr (http://modernizr.com/).  
-
-Instead of using browser switches, build sites and services that are cross-platform/cross-device compatible.       
-
-New in Version 1.20
--------------------
-- #142 Fix iPhone detection in case of Opera Mini agent-string 
-- #154 Prevent bots with bot in UA-String from pretending to be Safari
-- Added latest Edge versions
-- Added current and future Chrome and Firefox versions 
-- #152 improved version discovery specifically for Safari
-- #146 Fixed IE mobile 11 version detection
-
-Javadoc
--------
-http://bitwalker.eu/user-agent-utils-snapshot/javadoc/index.html
+https://github.com/leonchen83/user-agent-utils/tree/master
 
 Maven
 -----
@@ -51,8 +12,8 @@ Maven
 Add dependency:
 ```xml
 <dependency>
-   <groupId>eu.bitwalker</groupId>
-   <artifactId>UserAgentUtils</artifactId>
+   <groupId>com.moilioncircle</groupId>
+   <artifactId>user-agent-utils</artifactId>
    <version>1.52</version>
 </dependency>
 ```
@@ -60,10 +21,6 @@ Add dependency:
 Contributors
 ------------
 * accepting any new contributions.  
-
-Sponsors
---------
-Jetbrains  
 
 Contact
 -------
@@ -74,7 +31,8 @@ Changelog
 
 1.52
 ----
-- Added current Firefox and Chrome and Opera versions(until 2018-02-27)
+- Added current Firefox and Chrome and Opera versions (until 2018-02-27)  
+- Merged remote branch 1.21  
 
 1.19
 ----
