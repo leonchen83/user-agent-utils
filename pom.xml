@@ -7,7 +7,7 @@
 	<name>user-agent-utils</name>
     <url>https://github.com/leonchen83/user-agent-utils</url>
 	<artifactId>user-agent-utils</artifactId>
-	<version>1.52</version>
+	<version>1.53</version>
 	<description>Utility classes to handle user-agents.</description>
 
 	<licenses>
@@ -30,7 +30,7 @@
 		</developer>
 
 		<developer>
-			<name>Leon Chen</name>
+			<name>Baoyi Chen</name>
 			<email>chen.bao.yi@gmail.com</email>
 			<organization>moilioncircle</organization>
 			<organizationUrl>http://www.moilioncircle.com/</organizationUrl>
@@ -45,7 +45,7 @@
 		<connection>scm:git:git@github.com:leonchen83/user-agent-utils.git</connection>
 		<url>scm:git:git@github.com:leonchen83/user-agent-utils.git</url>
 		<developerConnection>scm:git:git@github.com:leonchen83/user-agent-utils.git</developerConnection>
-		<tag>1.52</tag>
+		<tag>1.53</tag>
 	</scm>
 
 	<issueManagement>
@@ -77,12 +77,67 @@
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-jar-plugin</artifactId>
 						<version>3.0.2</version>
+						<configuration>
+							<archive combine.children="append">
+								<manifestEntries>
+									<Automatic-Module-Name>eu.bitwalker.useragentutils</Automatic-Module-Name>
+								</manifestEntries>
+							</archive>
+						</configuration>
+					</plugin>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-toolchains-plugin</artifactId>
+						<version>1.1</version>
+						<executions>
+							<execution>
+								<id>toolchain</id>
+								<goals>
+									<goal>toolchain</goal>
+								</goals>
+							</execution>
+						</executions>
+						<configuration>
+							<toolchains>
+								<jdk>
+									<version>9</version>
+								</jdk>
+								<jdk>
+									<version>1.8</version>
+								</jdk>
+							</toolchains>
+						</configuration>
 					</plugin>
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-compiler-plugin</artifactId>
 						<version>3.7.0</version>
+						<executions>
+							<execution>
+								<id>base-compile</id>
+								<goals>
+									<goal>compile</goal>
+								</goals>
+								<configuration>
+									<excludes>
+										<exclude>module-info.java</exclude>
+									</excludes>
+								</configuration>
+							</execution>
+							<execution>
+								<id>default-compile</id>
+								<configuration>
+									<jdkToolchain>
+										<version>[9, )</version>
+									</jdkToolchain>
+									<release>9</release>
+								</configuration>
+							</execution>
+						</executions>
 						<configuration>
+							<jdkToolchain>
+								<version>[1.8, )</version>
+							</jdkToolchain>
 							<source>${maven.compiler.source}</source>
 							<target>${maven.compiler.target}</target>
 							<encoding>${project.build.sourceEncoding}</encoding>
@@ -99,9 +154,15 @@
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-javadoc-plugin</artifactId>
-						<version>3.0.0-M1</version>
+						<version>3.0.0</version>
 						<configuration>
 							<encoding>${project.build.sourceEncoding}</encoding>
+							<sourceFileExcludes>
+								<sourceFileExclude>**/module-info.java</sourceFileExclude>
+							</sourceFileExcludes>
+							<jdkToolchain>
+								<version>[9, )</version>
+							</jdkToolchain>
 						</configuration>
 						<executions>
 							<execution>
@@ -163,12 +224,67 @@
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-jar-plugin</artifactId>
 						<version>3.0.2</version>
+						<configuration>
+							<archive combine.children="append">
+								<manifestEntries>
+									<Automatic-Module-Name>eu.bitwalker.useragentutils</Automatic-Module-Name>
+								</manifestEntries>
+							</archive>
+						</configuration>
+					</plugin>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-toolchains-plugin</artifactId>
+						<version>1.1</version>
+						<executions>
+							<execution>
+								<id>toolchain</id>
+								<goals>
+									<goal>toolchain</goal>
+								</goals>
+							</execution>
+						</executions>
+						<configuration>
+							<toolchains>
+								<jdk>
+									<version>9</version>
+								</jdk>
+								<jdk>
+									<version>1.8</version>
+								</jdk>
+							</toolchains>
+						</configuration>
 					</plugin>
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-compiler-plugin</artifactId>
 						<version>3.7.0</version>
+						<executions>
+							<execution>
+								<id>base-compile</id>
+								<goals>
+									<goal>compile</goal>
+								</goals>
+								<configuration>
+									<excludes>
+										<exclude>module-info.java</exclude>
+									</excludes>
+								</configuration>
+							</execution>
+							<execution>
+								<id>default-compile</id>
+								<configuration>
+									<jdkToolchain>
+										<version>[9, )</version>
+									</jdkToolchain>
+									<release>9</release>
+								</configuration>
+							</execution>
+						</executions>
 						<configuration>
+							<jdkToolchain>
+								<version>[1.8, )</version>
+							</jdkToolchain>
 							<source>${maven.compiler.source}</source>
 							<target>${maven.compiler.target}</target>
 							<encoding>${project.build.sourceEncoding}</encoding>
@@ -185,9 +301,15 @@
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-javadoc-plugin</artifactId>
-						<version>3.0.0-M1</version>
+						<version>3.0.0</version>
 						<configuration>
 							<encoding>${project.build.sourceEncoding}</encoding>
+							<sourceFileExcludes>
+								<sourceFileExclude>**/module-info.java</sourceFileExclude>
+							</sourceFileExcludes>
+							<jdkToolchain>
+								<version>[9, )</version>
+							</jdkToolchain>
 						</configuration>
 						<executions>
 							<execution>
@@ -222,6 +344,71 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jar-plugin</artifactId>
 				<version>3.0.2</version>
+				<configuration>
+					<archive combine.children="append">
+						<manifestEntries>
+							<Automatic-Module-Name>cn.nextop.lite.pool</Automatic-Module-Name>
+						</manifestEntries>
+					</archive>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-toolchains-plugin</artifactId>
+				<version>1.1</version>
+				<executions>
+					<execution>
+						<id>toolchain</id>
+						<goals>
+							<goal>toolchain</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<toolchains>
+						<jdk>
+							<version>9</version>
+						</jdk>
+						<jdk>
+							<version>1.8</version>
+						</jdk>
+					</toolchains>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.7.0</version>
+				<executions>
+					<execution>
+						<id>base-compile</id>
+						<goals>
+							<goal>compile</goal>
+						</goals>
+						<configuration>
+							<excludes>
+								<exclude>module-info.java</exclude>
+							</excludes>
+						</configuration>
+					</execution>
+					<execution>
+						<id>default-compile</id>
+						<configuration>
+							<jdkToolchain>
+								<version>[9, )</version>
+							</jdkToolchain>
+							<release>9</release>
+						</configuration>
+					</execution>
+				</executions>
+				<configuration>
+					<jdkToolchain>
+						<version>[1.8, )</version>
+					</jdkToolchain>
+					<source>${maven.compiler.source}</source>
+					<target>${maven.compiler.target}</target>
+					<encoding>${project.build.sourceEncoding}</encoding>
+				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.eluder.coveralls</groupId>

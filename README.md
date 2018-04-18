@@ -14,7 +14,7 @@ Add dependency:
 <dependency>
    <groupId>com.moilioncircle</groupId>
    <artifactId>user-agent-utils</artifactId>
-   <version>1.52</version>
+   <version>1.53</version>
 </dependency>
 ```
 
@@ -28,6 +28,10 @@ chen.bao.yi@qq.com
 
 Changelog
 ---------
+
+1.53
+----
+- Support JDK9, JDK10
 
 1.52
 ----
